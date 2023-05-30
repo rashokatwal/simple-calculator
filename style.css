@@ -1,0 +1,88 @@
+:root {
+    --output-bgcolor: #36474F;
+    --input-bgcolor: #18212A;
+    --operator-color: #000;
+    --operator-bgcolor: #fff;
+    --text-color: #fff;
+}
+* {
+    font-family: arial;
+    color: var(--text-color);
+}
+.light-mode {
+    --output-bgcolor: #FEFEFE;
+    --input-bgcolor: #F5F5F5;
+    --operator-color: #000;
+    --operator-bgcolor: #E5E5E5;
+    --text-color: #000
+}
+body{
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DFDFDF;
+}
+.outer-body {
+    border: solid;
+    width: 280px;
+    border-radius: 20px;
+    border: 0px;
+
+}
+.output-section {
+    padding: 5px 20px;
+    background-color: var(--output-bgcolor);
+    border-radius: 20px 20px 0 0 ;
+}
+.output-section .screen {
+    text-align: right;
+    height: 130px;
+    max-width: 240px;
+    border: none;
+    font-size: 25px;
+    padding: 5px;
+    background-color: transparent;
+}
+.output-section .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.output-section #mode-switch {
+    height: 20px;
+    cursor: pointer;
+}
+#calculation {
+    font-size: 35px;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    overflow-x: auto;
+    background-color: transparent;
+}
+#result {
+    color:#9c9c9c;
+}
+.input-section {
+    display: grid;
+    grid-template-columns: auto auto auto auto  ;
+    background-color: var(--input-bgcolor);
+    padding: 5px 5px 20px 5px;
+    border-radius: 0 0 20px 20px;
+}
+.input-section .grid-item {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.input-section .operator {
+    background: var(--operator-bgcolor);
+    color: var(--operator-color);
+    border-radius: 50%;
+}

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="outer-body">
+            <div class="output-section" id="output">
+                <div class="heading">
+                    <h2 style="font-weight:300">Calculator</h2>
+                    <div id="mode-switch">
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16" style="cursor: pointer" onclick="toggleMode()">
+                            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="screen">
+                    <div id="calculation"></div>
+                    <div id="result"></div>   
+                </div>                   
+            </div>
+            <div class="input-section" id="input">
+                <div class="grid-item" value="clear">AC</div>
+                <div class="grid-item" value="delete">
+                	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+					  <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+					  <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+					</svg>
+                </div>
+                <div class="grid-item"></div>  
+                <div class="grid-item operator" value="/">
+                    <svg height="15" width="15" viewBox="0 0 448 512">
+                        <path d="M272 96a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 320a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM400 288c17.7 0 32-14.3 32-32s-14.3-32-32-32H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H400z"/>
+                    </svg>
+                </div>
+                <div class="grid-item" value="7">7</div>
+                <div class="grid-item" value="8">8</div>  
+                <div class="grid-item" value="9">9</div>
+                <div class="grid-item operator" value="*">
+                    <svg width="14" height="14" fill="black" viewBox="0 0 16 16">
+                      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>
+                </div>
+                <div class="grid-item" value="4">4</div>  
+                <div class="grid-item" value="5">5</div>
+                <div class="grid-item" value="6">6</div>
+                <div class="grid-item operator" value="-">-</div>  
+                <div class="grid-item" value="1">1</div>
+                <div class="grid-item" value="2">2</div>
+                <div class="grid-item" value="3">3</div>  
+                <div class="grid-item operator" value="+">+</div>
+                <div class="grid-item"></div>
+                <div class="grid-item" value="0">0</div>  
+                <div class="grid-item" value=".">.</div>
+                <div class="grid-item operator" style="background-color: #FF6531;color: white" value="equal">=</div> 
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
